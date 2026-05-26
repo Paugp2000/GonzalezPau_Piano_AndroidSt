@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#222">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- ===== TECLAS BLANCAS ===== -->
+    <LinearLayout
+        android:id="@+id/white_keys"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- 14 white keys -->
+        <ImageButton android:id="@+id/key_c2"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_d2"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_e2"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_f2"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_g2"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_a2"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_b2"  style="@style/WhiteKey"/>
+
+        <ImageButton android:id="@+id/key_c3"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_d3"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_e3"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_f3"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_g3"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_a3"  style="@style/WhiteKey"/>
+        <ImageButton android:id="@+id/key_b3"  style="@style/WhiteKey"/>
+
+        <ImageButton android:id="@+id/key_c4"  style="@style/WhiteKey"/>
+    </LinearLayout>
+
+    <!-- ===== TECLAS NEGRAS ===== -->
+    <LinearLayout
+        android:id="@+id/black_keys"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="top"
+        android:paddingTop="40dp">
+
+        <!-- Patró: negre – espai – negre – espai – espai – negre – negre – negre ... -->
+
+        <!-- Octava 2 -->
+        <Space android:layout_width="0dp" android:layout_weight="0.5" android:layout_height="match_parent"/>
+        <ImageButton android:id="@+id/key_c2_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.3" android:layout_height="match_parent"/>
+        <ImageButton android:id="@+id/key_d2_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.9" android:layout_height="match_parent"/>
+
+        <ImageButton android:id="@+id/key_f2_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="match_parent"/>
+        <ImageButton android:id="@+id/key_g2_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="match_parent"/>
+        <ImageButton android:id="@+id/key_a2_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.9" android:layout_height="match_parent"/>
+        <!-- Octava 3 -->
+        <ImageButton android:id="@+id/key_c3_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.3" android:layout_height="match_parent"/>
+        <ImageButton android:id="@+id/key_d3_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.8" android:layout_height="match_parent"/>
+
+        <ImageButton android:id="@+id/key_f3_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="match_parent"/>
+        <ImageButton android:id="@+id/key_g3_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="match_parent"/>
+        <ImageButton android:id="@+id/key_a3_sharp" style="@style/BlackKey"/>
+        <Space android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>
